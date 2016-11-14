@@ -1,5 +1,5 @@
 # movieread.py
-#
+# Matthew Cucuzza Troy Ingel
 # retrieve the movies from the API
 
 import urllib
