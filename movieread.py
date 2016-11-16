@@ -1,6 +1,6 @@
 # movieread.py
 # Matthew Cucuzza Troy Ingel
-# retrieve the movies from the API
+# Retrieve Movies and their properies from the OMDB API
 
 import urllib
 import json
@@ -27,34 +27,45 @@ while True:
 
     print json.dumps(js, indent =4)
 
-    #print js.keys() # retrieves Plot, Rated, Title etc
-    #print js.values()
+    plot = js["Plot"]
+    rated = js["Rated"]
+    # response = js["Response"]
+    language = js["Language"]
+    title = js["Title"]
+    country = js["Country"]
+    writer = js["Writer"]
+    metascore = js["Metascore"]
+    imdbRating = js["imdbRating"]
+    director = js["Director"]
+    released = js["Released"]
+    actors = js["Actors"]
+    year = js["Year"]
+    genre = js["Genre"]
+    awards = js["Awards"]
+    runtime = js["Runtime"]
+    movie_type = js["Type"]
+    poster = js["Poster"]
+    imdbVotes = js["imdbVotes"]
+    imdbID = js["imdbID"]
 
-    for x in range(0, len(js['Plot'])):
-        plot = js['Plot'].split()
-
-    print plot
-
-
-    # rated = js["Rated"][0]
-    # #response = js["Response"[0]
-    # language = js["Language"][0]
-    # title = js["Title"][0]
-    # country = js["Country"][0]
-    # writer = js["Writer"][0]
-    # metascore = js["Metascore"][0]
-    # imdbRating = js["imdbRating"][0]
-    # director = js["Director"][0]
-    # released = js["Released"][0]
-    # actors = js["Actors"][0]
-    # year = js["Year"].split()
-    # genre = js["Genre"][0]
-    # awards = js["Awards"][0]
-    # runtime = js["Runtime"][0]
-    # movie_type = js["Type"][0]
-    # poster = js["Poster"][0]
-    # imdbVotes = js["imdbVotes"][0]
-    # imdbID = js["imdbID"][0]
+    # print plot
+    # print rated
+    # print language
+    # print title
+    # print country
+    # print writer
+    # print metascore
+    # print imdbRating
+    # print director
+    # print released
+    # print actors
+    # print year
+    # print genre
+    # print awards
+    # print runtime
+    # print poster
+    # print imdbVotes
+    # print imdbID
 
     print('')
     print'url: ',url
