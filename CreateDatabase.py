@@ -1,13 +1,14 @@
-    # Matt Cucuzza & Troy Ingel
-    # CSC 325
+# Matt Cucuzza & Troy Ingel
+# CSC 325
+#
+# File executes SQL commands to create the Movie Database in SQLite 
 
 import urllib
 import sqlite3
 
-#SQL statements to create tables in the database
-#Drops all of the tables first if they exist
-#Then recreates all of the tables used in the database with
-#their primary keys and references to foreign keys
+# SQL statements to create tables in the database
+# Drops all of the tables first if they exist
+# Recreates all of the tables used in the database with their primary keys and references to foreign keys
 def createDatabase(cur):
     cur.executescript('''
     DROP TABLE IF EXISTS Acts;

@@ -1,5 +1,7 @@
 # Matt Cucuzza & Troy Ingel
 # CSC 325
+#
+# File uses the CreateDatabase file to populate the database 
 
 #import method from another file (make sure they are in same location)
 from CreateDatabase import createDatabase
@@ -143,7 +145,7 @@ def populateDB():
 
         try:
             data = cur.fetchone()[0]
-            print "Movie Already In DB:", movie_title
+            #print "Movie Already In DB:", movie_title
             continue
         except:
             pass
@@ -185,7 +187,6 @@ def populateDB():
         movie_type = js_str["Type"]
         imdbVotes = js_str["imdbVotes"]
         imdbID = js_str["imdbID"]
-
 
         #Movie - insert all values contained in Movie table
         cur.execute('''INSERT OR IGNORE INTO Movie (title, plot, runtime, rated, release_date, imdbID, imdbVotes, imdbRating, metascore)
